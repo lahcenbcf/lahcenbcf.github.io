@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#clock::before{
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border: solid 2px lightcyan;
+    border-radius: 50%;
+    position: absolute;
+}
+#clock span{
+text-align: center;
+inset: 20px;
+transform: rotate(calc(30deg * var(--i)));
+position: absolute;
+color: lightcyan;
+}
+#clock span b{
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+
+}
+
+
+
+.circle i{
+    position: absolute;
+    height: 50%;
+    width: 6px;
+    background-color: var(--clr);
+    opacity: .6;
+    transform: scaleY(.5);
+    transform-origin: bottom;
+
+}
+.circle:nth-child(1)i{
+    width: 3px;
+    z-index: 10;
+}
+.circle:nth-child(2)i{
+    width: 5px;
+    z-index: 7;
+}
+.circle:nth-child(3)i{
+    width: 8px;
+    z-index: 2;
+}
+.circle::before{
+    content: '';
+    background-color: var(--clr);
+    border-radius: 50%;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: -10px;
+}
+ h3{
+    font-family: monospace;
+    color: white;
+}
+.horloge{
+    font-size: 20px;
+    font-family: monospace;
+}
